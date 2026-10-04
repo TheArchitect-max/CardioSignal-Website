@@ -3,14 +3,14 @@
   <desc id="desc">An original abstract composition of a cardiac signal emerging from darkness through warm biological light and cool analytical traces.</desc>
   <defs>
     <radialGradient id="warm" cx="60%" cy="45%" r="48%">
-      <stop offset="0" stop-color="#f1c07a" stop-opacity=".82"/>
-      <stop offset=".2" stop-color="#b56f3f" stop-opacity=".38"/>
-      <stop offset=".58" stop-color="#6b341f" stop-opacity=".11"/>
+      <stop offset="0" stop-color="#e2ad68" stop-opacity=".48"/>
+      <stop offset=".2" stop-color="#9b5832" stop-opacity=".20"/>
+      <stop offset=".58" stop-color="#512516" stop-opacity=".045"/>
       <stop offset="1" stop-color="#050709" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="cool" cx="48%" cy="54%" r="42%">
-      <stop offset="0" stop-color="#83d9e7" stop-opacity=".26"/>
-      <stop offset=".5" stop-color="#2f7783" stop-opacity=".08"/>
+      <stop offset="0" stop-color="#73beca" stop-opacity=".15"/>
+      <stop offset=".5" stop-color="#285e67" stop-opacity=".035"/>
       <stop offset="1" stop-color="#050709" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="pulse" x1="0" x2="1">
@@ -22,20 +22,20 @@
     </linearGradient>
     <filter id="blur24"><feGaussianBlur stdDeviation="24"/></filter>
     <filter id="blur46"><feGaussianBlur stdDeviation="46"/></filter>
-    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
 
-  <rect width="1200" height="900" fill="#050709"/>
+  <rect width="1200" height="900" fill="#020304"/>
   <ellipse cx="725" cy="405" rx="430" ry="365" fill="url(#warm)" filter="url(#blur46)"/>
   <ellipse cx="600" cy="500" rx="370" ry="290" fill="url(#cool)" filter="url(#blur46)"/>
 
-  <g opacity=".24" fill="none" stroke="#d7b080">
+  <g opacity=".12" fill="none" stroke="#b88758">
     <ellipse cx="690" cy="430" rx="270" ry="320" stroke-width="2"/>
     <ellipse cx="690" cy="430" rx="220" ry="270" stroke-width="1.4"/>
     <ellipse cx="690" cy="430" rx="170" ry="220" stroke-width="1"/>
   </g>
 
-  <g opacity=".17" fill="none" stroke="#78c8d6">
+  <g opacity=".09" fill="none" stroke="#66aab5">
     <path d="M230 248C382 156 510 148 662 202C821 258 938 243 1033 176" stroke-width="1.5"/>
     <path d="M187 660C351 757 520 748 686 696C854 643 992 651 1094 725" stroke-width="1.5"/>
     <path d="M252 720C420 594 515 540 650 535C815 528 918 590 1032 704" stroke-width="1"/>
@@ -61,22 +61,29 @@
            L860 524
            L910 520
            L1128 520"
-        fill="none" stroke="url(#pulse)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+        fill="none" stroke="url(#pulse)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
 
-  <g opacity=".26">
+  <g opacity=".16">
     <circle cx="584" cy="346" r="13" fill="#efbb75" filter="url(#glow)"/>
     <circle cx="620" cy="650" r="10" fill="#7fd2df" filter="url(#glow)"/>
     <circle cx="660" cy="452" r="8" fill="#e2a760" filter="url(#glow)"/>
   </g>
 
-  <g opacity=".12" stroke="#b7c7cf" stroke-width="1">
+  <g opacity=".055" stroke="#8da0a8" stroke-width="1">
     <path d="M0 120H1200M0 300H1200M0 480H1200M0 660H1200M0 840H1200"/>
     <path d="M120 0V900M360 0V900M600 0V900M840 0V900M1080 0V900"/>
   </g>
 
-  <g opacity=".18" fill="#f0bf7c" filter="url(#blur24)">
+  <g opacity=".09" fill="#c88f51" filter="url(#blur24)">
     <circle cx="740" cy="250" r="28"/>
     <circle cx="815" cy="332" r="18"/>
     <circle cx="658" cy="280" r="14"/>
   </g>
+  <radialGradient id="vignette" cx="58%" cy="48%" r="66%">
+    <stop offset="0" stop-color="#000" stop-opacity="0"/>
+    <stop offset=".56" stop-color="#000" stop-opacity=".10"/>
+    <stop offset=".82" stop-color="#000" stop-opacity=".62"/>
+    <stop offset="1" stop-color="#000" stop-opacity=".92"/>
+  </radialGradient>
+  <rect width="1200" height="900" fill="url(#vignette)"/>
 </svg>
