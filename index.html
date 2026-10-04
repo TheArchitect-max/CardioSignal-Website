@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07111f">
-  <meta name="description" content="CardioSignal Intelligence Platform — evidence-governed ECG signal processing, reproducible model development, secure inference, and validation infrastructure.">
+  <meta name="theme-color" content="#07090b">
+  <meta name="description" content="CardioSignal Intelligence Platform — evidence-governed ECG research and engineering infrastructure for traceable signal workflows, reproducible model development, controlled inference, and evaluation evidence.">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="CardioSignal Intelligence Platform">
   <meta property="og:description" content="Evidence-Governed ECG Intelligence">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thearchitect-max.github.io/CardioSignal-Website/">
+  <meta property="og:image" content="https://thearchitect-max.github.io/CardioSignal-Website/assets/cardiosignal-concept.svg">
+  <meta name="twitter:card" content="summary_large_image">
   <title>CardioSignal Intelligence Platform</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,7 +23,7 @@
     <div class="shell nav-shell">
       <a class="brand" href="#top" aria-label="CardioSignal home">
         <span class="brand-mark" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span>
+          <i></i><i></i><i></i><i></i><i></i>
         </span>
         <span class="brand-copy">
           <strong>CardioSignal</strong>
@@ -33,228 +36,298 @@
         <span class="sr-only">Toggle navigation</span>
       </button>
 
-      <nav class="site-nav" id="site-nav" data-nav>
-        <a href="#platform">Platform</a>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="Primary navigation">
+        <a href="#purpose">Purpose</a>
+        <a href="#capabilities">Capabilities</a>
         <a href="#architecture">Architecture</a>
-        <a href="#validation">Validation</a>
-        <a href="#release">Release</a>
-        <a href="#scope">Scope</a>
+        <a href="#status">Status</a>
+        <a class="nav-portfolio" href="https://thearchitect-max.github.io/MyProjects/" target="_blank" rel="noreferrer">TheArchitectMax HUB</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+      <div class="hero-darkness" aria-hidden="true"></div>
+      <div class="hero-light hero-light-warm" aria-hidden="true"></div>
+      <div class="hero-light hero-light-cool" aria-hidden="true"></div>
 
       <div class="shell hero-layout">
-        <div class="hero-copy">
+        <div class="hero-copy" data-reveal>
+          <p class="maker-line">An independent project by <a href="https://thearchitect-max.github.io/MyProjects/" target="_blank" rel="noreferrer">TheArchitectMax</a></p>
           <p class="eyebrow"><span class="status-dot"></span> Evidence-Governed ECG Intelligence</p>
-          <h1>Build ECG systems that remain <span>traceable, reproducible, and controlled.</span></h1>
+          <h1>Make the <em>evidence trail</em> visible from signal to evaluation.</h1>
           <p class="hero-lede">
-            CardioSignal is an engineering platform for deterministic ECG signal processing, evidence governance,
-            reproducible model development, secure ONNX inference, robustness analysis, and locked evaluation.
+            CardioSignal is a research and engineering platform for traceable ECG signal workflows,
+            reproducible model development, controlled inference, and evidence-oriented evaluation.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#platform">Explore the platform</a>
-            <a class="button button-secondary" href="https://github.com/TheArchitect-max/CardioSignal-Website" target="_blank" rel="noreferrer">View public repository</a>
+            <a class="button button-primary" href="#purpose">Explore CardioSignal</a>
+            <a class="button button-quiet" href="https://github.com/TheArchitect-max/CardioSignal-Website" target="_blank" rel="noreferrer">Public website repository</a>
           </div>
-          <div class="hero-facts" aria-label="Current engineering status">
-            <div><strong>v0.10.0</strong><span>Current public milestone</span></div>
-            <div><strong>111</strong><span>Automated tests per runtime</span></div>
-            <div><strong>3.10–3.13</strong><span>Python validation matrix</span></div>
-          </div>
+
+          <dl class="hero-facts" aria-label="Current public engineering status">
+            <div><dt>Milestone</dt><dd>v0.10.0</dd></div>
+            <div><dt>Verification</dt><dd>111 tests / runtime</dd></div>
+            <div><dt>Runtime matrix</dt><dd>Python 3.10–3.13</dd></div>
+          </dl>
         </div>
 
-        <div class="signal-panel" aria-label="CardioSignal platform overview">
-          <div class="signal-panel-head">
-            <span>ECG / EVIDENCE PIPELINE</span>
-            <span class="panel-state">CONTROLLED</span>
+        <figure class="concept-visual" data-reveal>
+          <div class="concept-frame">
+            <img src="assets/cardiosignal-concept.svg" width="1200" height="900" alt="Conceptual abstract ECG signal emerging from warm biological light and cool analytical traces.">
+            <div class="concept-readout" aria-hidden="true">
+              <span>TRACEABLE SIGNAL</span>
+              <span>CONTROLLED EVIDENCE</span>
+            </div>
           </div>
+          <figcaption>Concept visual — illustrative representation, not a clinical device or deployed interface.</figcaption>
+        </figure>
+      </div>
 
-          <div class="wave-card">
-            <svg viewBox="0 0 720 180" role="img" aria-label="Stylized ECG waveform">
-              <path class="wave-grid" d="M0 30H720M0 60H720M0 90H720M0 120H720M0 150H720M60 0V180M120 0V180M180 0V180M240 0V180M300 0V180M360 0V180M420 0V180M480 0V180M540 0V180M600 0V180M660 0V180"/>
-              <path class="wave-line" d="M0 98 L70 98 L94 92 L112 101 L136 98 L170 98 L192 87 L209 101 L226 98 L259 98 L278 92 L290 98 L307 98 L325 105 L344 25 L363 148 L386 76 L404 98 L448 98 L470 92 L492 100 L515 98 L547 98 L569 87 L588 101 L608 98 L640 98 L662 92 L676 99 L720 98"/>
-            </svg>
-          </div>
+      <div class="hero-bottom-rule" aria-hidden="true"></div>
+    </section>
 
-          <div class="pipeline-list">
-            <div class="pipeline-row">
-              <span class="pipeline-index">01</span>
-              <div><strong>Signal integrity</strong><small>Hash-bound local artifacts and deterministic preprocessing</small></div>
-              <span class="check">✓</span>
-            </div>
-            <div class="pipeline-row">
-              <span class="pipeline-index">02</span>
-              <div><strong>Evidence governance</strong><small>Dataset, task, ontology, model and environment provenance</small></div>
-              <span class="check">✓</span>
-            </div>
-            <div class="pipeline-row">
-              <span class="pipeline-index">03</span>
-              <div><strong>Controlled development</strong><small>Train/validation separation, reproducible trials and calibration</small></div>
-              <span class="check">✓</span>
-            </div>
-            <div class="pipeline-row">
-              <span class="pipeline-index">04</span>
-              <div><strong>Locked evaluation</strong><small>Candidate freeze, gated test access and evidence receipts</small></div>
-              <span class="check">✓</span>
-            </div>
-          </div>
+    <section class="section purpose-section" id="purpose">
+      <div class="shell purpose-grid">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Why it exists</p>
+          <h2>ECG development becomes difficult to trust when signal, data, model, and evaluation evidence drift apart.</h2>
+        </div>
+        <div class="purpose-copy" data-reveal>
+          <p>
+            CardioSignal is designed to keep those stages connected at a high level: what signal was used,
+            which evidence governed it, which model-development path was followed, and how evaluation results
+            relate back to the selected candidate.
+          </p>
+          <p>
+            The goal is not to replace scientific or clinical judgment. The goal is to provide a disciplined
+            engineering layer for ECG research workflows where provenance, repeatability, and explicit boundaries matter.
+          </p>
+        </div>
+      </div>
+
+      <div class="shell audience-band" data-reveal>
+        <span class="audience-label">Relevant for</span>
+        <div class="audience-items">
+          <span>ECG research engineering</span>
+          <span>Algorithm development</span>
+          <span>Model evaluation workflows</span>
+          <span>Evidence-oriented prototyping</span>
         </div>
       </div>
     </section>
 
-    <section class="section section-intro" id="platform">
+    <section class="section capabilities-section" id="capabilities">
       <div class="shell">
-        <div class="section-heading">
-          <p class="eyebrow">Platform capabilities</p>
-          <h2>One governed path from raw signal to validated model evidence.</h2>
+        <div class="section-heading narrow" data-reveal>
+          <p class="eyebrow">Core capabilities</p>
+          <h2>Publicly understandable capabilities, without exposing the private implementation.</h2>
           <p>
-            CardioSignal is designed around explicit contracts and fail-closed boundaries. The platform separates
-            signal handling, evidence qualification, model development, runtime execution, and evaluation so each
-            step can be inspected independently.
+            The platform is presented here at product level: what each layer supports and why it exists,
+            not the proprietary algorithms or internal control logic used to implement it.
           </p>
         </div>
 
         <div class="capability-grid">
-          <article class="capability-card">
-            <span class="card-kicker">Signal</span>
-            <h3>Deterministic ECG processing</h3>
-            <p>Controlled resampling, filtering, fixed-length preprocessing, signal-quality evidence, segmentation, and provenance.</p>
+          <article class="capability-card warm" data-reveal>
+            <span class="card-number">01</span>
+            <div>
+              <p class="card-kicker">Signal</p>
+              <h3>Deterministic ECG handling</h3>
+              <p>Supports controlled signal conditioning, segmentation, quality evidence, and repeatable preprocessing contracts.</p>
+            </div>
           </article>
-          <article class="capability-card">
-            <span class="card-kicker">Data</span>
-            <h3>Evidence-bound datasets</h3>
-            <p>Dataset manifests, subject-disjoint splits, local artifact verification, hash integrity, and explicit test-access boundaries.</p>
+
+          <article class="capability-card cool" data-reveal>
+            <span class="card-number">02</span>
+            <div>
+              <p class="card-kicker">Evidence</p>
+              <h3>Traceable dataset governance</h3>
+              <p>Connects dataset identity, partitioning, task definitions, reference truth, and local artifact integrity at a high level.</p>
+            </div>
           </article>
-          <article class="capability-card">
-            <span class="card-kicker">Models</span>
-            <h3>Reproducible development</h3>
-            <p>Protocol-derived seeds, bounded trial spaces, train-only balancing, validation-only calibration, and immutable candidate freeze.</p>
+
+          <article class="capability-card warm" data-reveal>
+            <span class="card-number">03</span>
+            <div>
+              <p class="card-kicker">Development</p>
+              <h3>Reproducible model workflows</h3>
+              <p>Supports controlled trial planning, deterministic reference training, candidate selection, and validation-oriented calibration.</p>
+            </div>
           </article>
-          <article class="capability-card">
-            <span class="card-kicker">Runtime</span>
-            <h3>Secure ONNX execution</h3>
-            <p>CPU-only reference execution, model and preprocessing binding, environment fingerprints, and runtime evidence export.</p>
+
+          <article class="capability-card cool" data-reveal>
+            <span class="card-number">04</span>
+            <div>
+              <p class="card-kicker">Inference</p>
+              <h3>Controlled model execution</h3>
+              <p>Includes reproducible ONNX-based reference execution with model, preprocessing, and runtime provenance.</p>
+            </div>
           </article>
-          <article class="capability-card">
-            <span class="card-kicker">Validation</span>
-            <h3>Locked evaluation</h3>
-            <p>Token-gated test access, model/preprocessing verification, benchmark contracts, threshold policies, and auditable receipts.</p>
+
+          <article class="capability-card warm" data-reveal>
+            <span class="card-number">05</span>
+            <div>
+              <p class="card-kicker">Evaluation</p>
+              <h3>Locked evaluation workflow</h3>
+              <p>Separates development decisions from final test evaluation and records evidence around the selected candidate.</p>
+            </div>
           </article>
-          <article class="capability-card">
-            <span class="card-kicker">Robustness</span>
-            <h3>Controlled perturbation analysis</h3>
-            <p>Deterministic noise, gain, baseline-wander, and sample-dropout scenarios with prediction-drift controls.</p>
+
+          <article class="capability-card cool" data-reveal>
+            <span class="card-number">06</span>
+            <div>
+              <p class="card-kicker">Robustness</p>
+              <h3>Controlled perturbation analysis</h3>
+              <p>Supports deterministic scenario analysis for observing how model outputs respond to defined signal perturbations.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section architecture-section" id="architecture">
+      <div class="architecture-light" aria-hidden="true"></div>
       <div class="shell">
-        <div class="section-heading narrow">
-          <p class="eyebrow">Architecture</p>
-          <h2>Evidence is carried forward, not reconstructed afterward.</h2>
+        <div class="section-heading architecture-heading" data-reveal>
+          <p class="eyebrow">High-level architecture</p>
+          <h2>Evidence moves forward with the workflow.</h2>
           <p>
-            Every layer binds to the artifacts and contracts that came before it. This creates an auditable chain
-            without exposing proprietary implementation details on the public site.
+            This public diagram intentionally stays conceptual. It communicates the product flow without revealing
+            private schemas, source code, algorithms, security configuration, or reconstructable system internals.
           </p>
         </div>
 
-        <div class="architecture-flow" role="list" aria-label="High level CardioSignal architecture">
-          <div class="flow-node" role="listitem"><span>01</span><strong>Qualified dataset metadata</strong><small>Provenance + partition contract</small></div>
-          <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-node" role="listitem"><span>02</span><strong>Verified signal content</strong><small>Artifact integrity + authorization</small></div>
-          <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-node" role="listitem"><span>03</span><strong>Governed model development</strong><small>Reproducible train/validation path</small></div>
-          <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-node" role="listitem"><span>04</span><strong>Candidate freeze</strong><small>Immutable selection evidence</small></div>
-          <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-node" role="listitem"><span>05</span><strong>Locked evaluation</strong><small>Controlled test evidence</small></div>
+        <div class="architecture-stage" data-reveal>
+          <div class="architecture-spine" aria-hidden="true"></div>
+
+          <article class="architecture-node">
+            <span>01</span>
+            <div><strong>Qualified data context</strong><small>Identity, provenance, task and partition evidence</small></div>
+          </article>
+
+          <article class="architecture-node">
+            <span>02</span>
+            <div><strong>Controlled signal workflow</strong><small>Repeatable ECG preparation and traceability</small></div>
+          </article>
+
+          <article class="architecture-node">
+            <span>03</span>
+            <div><strong>Governed model development</strong><small>Reproducible development and validation decisions</small></div>
+          </article>
+
+          <article class="architecture-node">
+            <span>04</span>
+            <div><strong>Candidate freeze</strong><small>Selected model evidence is fixed before final evaluation</small></div>
+          </article>
+
+          <article class="architecture-node">
+            <span>05</span>
+            <div><strong>Locked evaluation</strong><small>Final test evidence remains separated from development</small></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section validation-section" id="validation">
-      <div class="shell validation-layout">
-        <div>
-          <p class="eyebrow">Engineering validation</p>
-          <h2>Verification is part of the architecture.</h2>
-          <p>
-            CardioSignal's current engineering baseline is validated across four supported Python runtimes with
-            repository-wide automated tests, compilation checks, dependency integrity, CLI smoke tests, package builds,
-            and real ONNX Runtime execution.
-          </p>
+    <section class="section principles-section">
+      <div class="shell">
+        <div class="section-heading narrow" data-reveal>
+          <p class="eyebrow">Design principles</p>
+          <h2>Technical discipline without turning the public site into a technical blueprint.</h2>
         </div>
-        <div class="validation-card">
-          <div class="validation-row"><span>Python 3.10</span><strong>111 / 111 PASS</strong></div>
-          <div class="validation-row"><span>Python 3.11</span><strong>111 / 111 PASS</strong></div>
-          <div class="validation-row"><span>Python 3.12</span><strong>111 / 111 PASS</strong></div>
-          <div class="validation-row"><span>Python 3.13</span><strong>111 / 111 PASS</strong></div>
-          <div class="validation-footer"><span class="status-dot"></span> Current v0.10.0 engineering gate: green</div>
+
+        <div class="principle-grid">
+          <article data-reveal>
+            <span>Traceability</span>
+            <h3>Know what evidence belongs to which step.</h3>
+            <p>Product contracts are designed to retain context instead of reconstructing it after the fact.</p>
+          </article>
+          <article data-reveal>
+            <span>Separation</span>
+            <h3>Keep development and final evaluation distinct.</h3>
+            <p>Training and validation decisions are treated separately from the final test path.</p>
+          </article>
+          <article data-reveal>
+            <span>Reproducibility</span>
+            <h3>Prefer repeatable engineering workflows.</h3>
+            <p>Deterministic reference paths and explicit runtime evidence make results easier to inspect and reproduce.</p>
+          </article>
+          <article data-reveal>
+            <span>Public restraint</span>
+            <h3>Explain the product, not the proprietary mechanism.</h3>
+            <p>The public website intentionally omits private algorithms, source code, model weights, internal schemas, and sensitive infrastructure.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section release-section" id="release">
-      <div class="shell release-layout">
-        <div class="release-badge">
-          <span>Current milestone</span>
-          <strong>v0.10.0</strong>
-          <small>Executable ECG dataset & neural training layer</small>
-        </div>
-        <div class="release-copy">
-          <p class="eyebrow">Release focus</p>
-          <h2>From governed contracts to executable reference training.</h2>
+    <section class="section status-section" id="status">
+      <div class="shell status-layout">
+        <div class="status-copy" data-reveal>
+          <p class="eyebrow">Current project status</p>
+          <h2>v0.10.0 — executable engineering reference path.</h2>
           <p>
-            The current milestone adds hash-verified local signal execution, deterministic dense neural reference training,
-            real ONNX export, native-vs-ONNX equivalence testing, and integration back into the platform's existing training-run evidence.
+            The current milestone connects governed ECG data handling to an executable deterministic reference-training path,
+            ONNX export, runtime comparison, and the existing evidence chain.
           </p>
-          <div class="release-tags" aria-label="v0.10.0 highlights">
-            <span>Hash verification</span>
-            <span>Train/validation isolation</span>
-            <span>Deterministic MLP</span>
-            <span>ONNX export</span>
-            <span>Evidence provenance</span>
-            <span>Locked test boundary</span>
+          <p class="status-note">
+            These statements describe software engineering capability and repository verification. They do not represent
+            clinical validation, clinical performance, or regulatory approval.
+          </p>
+        </div>
+
+        <div class="verification-card" data-reveal aria-label="Current engineering verification matrix">
+          <div class="verification-head">
+            <span>Repository verification</span>
+            <strong>GREEN</strong>
           </div>
+          <div class="verification-row"><span>Python 3.10</span><b>111 / 111</b></div>
+          <div class="verification-row"><span>Python 3.11</span><b>111 / 111</b></div>
+          <div class="verification-row"><span>Python 3.12</span><b>111 / 111</b></div>
+          <div class="verification-row"><span>Python 3.13</span><b>111 / 111</b></div>
+          <div class="verification-foot">Engineering verification only · v0.10.0</div>
         </div>
       </div>
     </section>
 
     <section class="section scope-section" id="scope">
-      <div class="shell scope-grid">
-        <div>
-          <p class="eyebrow">Public scope</p>
-          <h2>Engineering infrastructure, not a clinical claim.</h2>
+      <div class="shell scope-layout">
+        <div class="scope-title" data-reveal>
+          <p class="eyebrow">Public boundary</p>
+          <h2>What this website deliberately does not publish.</h2>
         </div>
-        <div class="scope-copy">
+
+        <div class="scope-panel" data-reveal>
           <p>
-            CardioSignal is currently positioned as research and engineering infrastructure. This public website does not
-            expose private source code, proprietary algorithms, model weights, confidential validation internals, or patient data.
+            This GitHub Pages site is a public project showcase and high-level documentation layer. It is not the
+            production backend, model-training environment, data store, authentication service, or clinical application.
           </p>
-          <ul class="scope-list">
-            <li>No patient data is published here.</li>
-            <li>No clinically trained ECG weights are distributed here.</li>
-            <li>No diagnosis or treatment recommendation is provided.</li>
-            <li>No medical-device certification or regulatory clearance is claimed.</li>
-            <li>Current validation statements refer to software engineering verification, not clinical validation.</li>
-          </ul>
+          <div class="scope-list" role="list">
+            <span role="listitem">No patient data</span>
+            <span role="listitem">No clinical model weights</span>
+            <span role="listitem">No proprietary source code</span>
+            <span role="listitem">No private algorithms or schemas</span>
+            <span role="listitem">No secrets or credentials</span>
+            <span role="listitem">No diagnosis or treatment advice</span>
+            <span role="listitem">No regulatory or certification claim</span>
+            <span role="listitem">No payment or SaaS runtime</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-section">
-      <div class="shell cta-panel">
+    <section class="portfolio-section">
+      <div class="portfolio-light" aria-hidden="true"></div>
+      <div class="shell portfolio-panel" data-reveal>
         <div>
-          <p class="eyebrow">CardioSignal Intelligence Platform</p>
-          <h2>ECG engineering with an evidence trail by design.</h2>
+          <p class="maker-line">Part of the TheArchitectMax software &amp; systems portfolio</p>
+          <h2>CardioSignal is a standalone project within a wider portfolio of engineering and research systems.</h2>
         </div>
-        <a class="button button-primary" href="https://github.com/TheArchitect-max" target="_blank" rel="noreferrer">TheArchitect-max on GitHub</a>
+        <div class="portfolio-actions">
+          <a class="button button-primary" href="https://thearchitect-max.github.io/MyProjects/" target="_blank" rel="noreferrer">Open TheArchitectMax HUB</a>
+          <a class="button button-quiet" href="#top">Back to top</a>
+        </div>
       </div>
     </section>
   </main>
@@ -266,7 +339,8 @@
         <span>Evidence-Governed ECG Intelligence</span>
       </div>
       <div class="footer-meta">
-        <span>Research & engineering platform</span>
+        <a href="https://thearchitect-max.github.io/MyProjects/" target="_blank" rel="noreferrer">TheArchitectMax HUB</a>
+        <a href="IMAGE_CREDITS.md">Visual credits</a>
         <span>© <span data-year>2026</span> TheArchitect-max</span>
       </div>
     </div>
