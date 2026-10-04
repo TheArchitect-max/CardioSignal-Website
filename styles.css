@@ -1,12 +1,12 @@
 :root {
-  --ink: #050607;
-  --ink-soft: #090b0e;
-  --coal: #111419;
-  --coal-2: #171b21;
+  --ink: #020304;
+  --ink-soft: #050607;
+  --coal: #090b0e;
+  --coal-2: #0d1014;
   --paper: #f1ede6;
   --muted: #a8a39b;
-  --line: rgba(255,255,255,.10);
-  --line-soft: rgba(255,255,255,.06);
+  --line: rgba(255,255,255,.075);
+  --line-soft: rgba(255,255,255,.038);
   --warm: #d9a568;
   --warm-bright: #f0c27d;
   --warm-deep: #6f3d24;
@@ -24,8 +24,8 @@ body {
   margin: 0;
   color: var(--paper);
   background:
-    radial-gradient(circle at 82% 8%, rgba(121, 74, 43, .09), transparent 28%),
-    radial-gradient(circle at 18% 36%, rgba(43, 96, 108, .05), transparent 32%),
+    radial-gradient(circle at 82% 8%, rgba(121, 74, 43, .035), transparent 25%),
+    radial-gradient(circle at 18% 36%, rgba(43, 96, 108, .018), transparent 28%),
     var(--ink);
   font-family: var(--sans);
   line-height: 1.65;
@@ -37,10 +37,10 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: -1;
-  opacity: .18;
+  opacity: .10;
   background:
-    linear-gradient(115deg, transparent 0 42%, rgba(255,255,255,.018) 49%, transparent 56%),
-    radial-gradient(circle at 50% 0, rgba(255,255,255,.025), transparent 36%);
+    linear-gradient(115deg, transparent 0 44%, rgba(255,255,255,.010) 50%, transparent 56%),
+    radial-gradient(circle at 50% 0, rgba(255,255,255,.014), transparent 30%);
 }
 a { color: inherit; }
 img, svg { max-width: 100%; }
@@ -67,7 +67,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: background .3s ease, border-color .3s ease, backdrop-filter .3s ease;
 }
 .site-header.scrolled {
-  background: rgba(5,6,7,.82);
+  background: rgba(2,3,4,.92);
   border-bottom-color: var(--line-soft);
   backdrop-filter: blur(18px) saturate(115%);
 }
@@ -166,25 +166,25 @@ button, a { -webkit-tap-highlight-color: transparent; }
   inset: 0;
   z-index: -3;
   background:
-    linear-gradient(90deg, #050607 0 43%, rgba(5,6,7,.86) 58%, rgba(5,6,7,.35) 80%, #050607 100%),
-    linear-gradient(to bottom, rgba(5,6,7,.12), #050607 96%);
+    linear-gradient(90deg, #020304 0 49%, rgba(2,3,4,.96) 62%, rgba(2,3,4,.72) 82%, #020304 100%),
+    linear-gradient(to bottom, rgba(2,3,4,.26), #020304 93%);
 }
 .hero-light {
   position: absolute;
   z-index: -2;
   border-radius: 50%;
-  filter: blur(100px);
+  filter: blur(125px);
   pointer-events: none;
 }
 .hero-light-warm {
   width: 560px; height: 560px;
   right: 3%; top: 14%;
-  background: rgba(181, 105, 60, .19);
+  background: rgba(181, 105, 60, .085);
 }
 .hero-light-cool {
   width: 390px; height: 390px;
   right: 23%; top: 35%;
-  background: rgba(68, 152, 167, .10);
+  background: rgba(68, 152, 167, .038);
 }
 .hero-layout {
   display: grid;
@@ -313,10 +313,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   min-height: 570px;
   overflow: hidden;
   border-radius: 48% 48% 28% 28% / 34% 34% 20% 20%;
-  background: #050607;
+  background: #020304;
   box-shadow:
-    0 40px 110px rgba(0,0,0,.64),
-    0 0 0 1px rgba(255,255,255,.035);
+    0 44px 120px rgba(0,0,0,.82),
+    0 0 0 1px rgba(255,255,255,.024);
 }
 .concept-frame::before {
   content: "";
@@ -325,8 +325,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   z-index: 2;
   pointer-events: none;
   background:
-    radial-gradient(circle at 67% 40%, transparent 0 25%, rgba(5,6,7,.02) 42%, rgba(5,6,7,.70) 82%, #050607 100%),
-    linear-gradient(to bottom, rgba(5,6,7,.12), transparent 36%, rgba(5,6,7,.50));
+    radial-gradient(circle at 67% 40%, transparent 0 18%, rgba(2,3,4,.12) 34%, rgba(2,3,4,.84) 74%, #020304 100%),
+    linear-gradient(to bottom, rgba(2,3,4,.40), rgba(2,3,4,.04) 32%, rgba(2,3,4,.78));
 }
 .concept-frame img {
   display: block;
@@ -377,8 +377,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .purpose-section {
   position: relative;
   background:
-    radial-gradient(circle at 8% 25%, rgba(119,72,43,.08), transparent 26%),
-    #080a0d;
+    radial-gradient(circle at 8% 25%, rgba(119,72,43,.028), transparent 22%),
+    #030405;
 }
 .purpose-grid {
   display: grid;
@@ -420,8 +420,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .capabilities-section {
   background:
-    radial-gradient(circle at 92% 18%, rgba(44,103,114,.08), transparent 25%),
-    #07090b;
+    radial-gradient(circle at 92% 18%, rgba(44,103,114,.026), transparent 22%),
+    #020304;
 }
 .capability-grid {
   margin-top: 52px;
@@ -440,7 +440,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   overflow: hidden;
   border-right: 1px solid var(--line-soft);
   border-bottom: 1px solid var(--line-soft);
-  background: rgba(255,255,255,.008);
+  background: rgba(255,255,255,.0035);
 }
 .capability-card::before {
   content: "";
@@ -449,7 +449,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   right: -80px; top: -90px;
   border-radius: 50%;
   filter: blur(55px);
-  opacity: .08;
+  opacity: .042;
   pointer-events: none;
 }
 .capability-card.warm::before { background: var(--warm); }
@@ -487,7 +487,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .architecture-section {
   position: relative;
   overflow: hidden;
-  background: #090b0e;
+  background: #030405;
 }
 .architecture-light {
   position: absolute;
@@ -496,7 +496,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transform: translate(-50%, -50%);
   border-radius: 50%;
   filter: blur(110px);
-  background: rgba(165,100,59,.09);
+  background: rgba(165,100,59,.036);
 }
 .architecture-heading { position: relative; z-index: 2; max-width: 760px; }
 .architecture-stage {
@@ -528,7 +528,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   display: grid;
   place-items: center;
   color: #b78653;
-  background: #090b0e;
+  background: #030405;
   font-size: 10px;
   font-weight: 850;
   letter-spacing: .14em;
@@ -549,8 +549,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .principles-section {
   background:
-    radial-gradient(circle at 20% 110%, rgba(58,125,137,.07), transparent 32%),
-    #07090b;
+    radial-gradient(circle at 20% 110%, rgba(58,125,137,.022), transparent 28%),
+    #020304;
 }
 .principle-grid {
   margin-top: 54px;
@@ -563,7 +563,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .principle-grid article {
   min-height: 320px;
   padding: 28px;
-  background: #080a0d;
+  background: #030405;
 }
 .principle-grid article > span {
   color: var(--cool);
@@ -587,8 +587,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .status-section {
   background:
-    radial-gradient(circle at 82% 35%, rgba(183,110,62,.10), transparent 28%),
-    #090b0e;
+    radial-gradient(circle at 82% 35%, rgba(183,110,62,.035), transparent 24%),
+    #030405;
 }
 .status-layout {
   display: grid;
@@ -612,7 +612,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   border: 1px solid var(--line);
   background:
     linear-gradient(145deg, rgba(255,255,255,.025), transparent 55%),
-    rgba(5,6,7,.58);
+    rgba(2,3,4,.84);
   box-shadow: 0 28px 80px rgba(0,0,0,.34);
 }
 .verification-head,
@@ -651,8 +651,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .scope-section {
   background:
-    radial-gradient(circle at 10% 25%, rgba(43,103,113,.06), transparent 25%),
-    #07090b;
+    radial-gradient(circle at 10% 25%, rgba(43,103,113,.018), transparent 22%),
+    #020304;
 }
 .scope-layout {
   display: grid;
@@ -684,7 +684,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   position: relative;
   overflow: hidden;
   padding: 94px 0;
-  background: #090b0e;
+  background: #030405;
   border-top: 1px solid var(--line-soft);
 }
 .portfolio-light {
@@ -692,8 +692,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 540px; height: 540px;
   right: -120px; top: -220px;
   border-radius: 50%;
-  filter: blur(100px);
-  background: rgba(198,135,76,.10);
+  filter: blur(125px);
+  background: rgba(198,135,76,.038);
 }
 .portfolio-panel {
   position: relative;
@@ -716,7 +716,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-footer {
   padding: 32px 0;
   border-top: 1px solid var(--line-soft);
-  background: #050607;
+  background: #020304;
 }
 .footer-layout {
   display: flex;
@@ -786,7 +786,7 @@ button:focus-visible {
     align-items: stretch;
     gap: 4px;
     border: 1px solid var(--line);
-    background: rgba(6,7,8,.97);
+    background: rgba(2,3,4,.985);
     backdrop-filter: blur(18px);
     box-shadow: 0 24px 80px rgba(0,0,0,.48);
   }
@@ -832,4 +832,34 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* Deeper tenebrism pass */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.18), rgba(0,0,0,.04) 46%, rgba(0,0,0,.26)),
+    radial-gradient(circle at 70% 42%, transparent 0 18%, rgba(0,0,0,.28) 58%, rgba(0,0,0,.62) 100%);
+}
+.concept-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: inset 0 0 120px 42px rgba(0,0,0,.62);
+}
+.capability-card,
+.verification-card,
+.principle-grid article {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.008);
+}
+.architecture-node strong,
+.capability-card h3,
+.principle-grid h3 {
+  text-shadow: 0 1px 18px rgba(255,255,255,.018);
 }
